@@ -87,8 +87,8 @@
                 if (newItem !== '') {
                     $('#itemList').append('<li class="list-group-item d-flex align-items-center">' +
                         '<span>' + newItem + '</span>' +
-                        '<i class="fas fa-check fa-2x ml-auto"></i>' +
-                        '<i class="fas fa-trash fa-2x ml-2"></i>' +
+                        '<i class="fas fa-check fa-lg ml-auto"></i>' +
+                        '<i class="fas fa-trash fa-lg ml-2"></i>' +
                         '</li>');
                     $('#itemInput').val('');
                 }
@@ -96,7 +96,7 @@
 
             // delete function
             $('#itemList').on('click', 'li i.fa-trash', function () {
-                $(this).parent('li').fadeOut(200);
+                $(this).closest('li').fadeOut(200);
             });
 
             // strike text
