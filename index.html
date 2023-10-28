@@ -96,7 +96,9 @@
 
             // delete function
             $('#itemList').on('click', 'li i.fa-trash', function () {
-                $(this).closest('li').fadeOut(200);
+                $(this).closest('li').fadeOut(200, function () {
+                    $(this).remove();
+                });
             });
 
             // strike text
