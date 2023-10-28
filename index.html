@@ -85,7 +85,11 @@
                 event.preventDefault();
                 const newItem = $('#itemInput').val().trim();
                 if (newItem !== '') {
-                    $('#itemList').append('<li class="list-group-item">' + newItem + ' <i class="fas fa-check"></i> <i class="fas fa-trash"></i> </li>');
+                    $('#itemList').append('<li class="list-group-item d-flex align-items-center">' +
+                        '<span>' + newItem + '</span>' +
+                        '<i class="fas fa-check fa-2x ml-auto"></i>' +
+                        '<i class="fas fa-trash fa-2x ml-2"></i>' +
+                        '</li>');
                     $('#itemInput').val('');
                 }
             });
